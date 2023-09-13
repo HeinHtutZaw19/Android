@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">StonyBrookGPA</string>
+    <string name="app_name">Stony Brook GPA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Hein Htut Zaw</string>
+    <string name="rank_title">Rank: </string>
+    <string name="rank">1</string>
 </resources>
