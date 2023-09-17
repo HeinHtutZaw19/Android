@@ -67,18 +67,21 @@ for course_code, course_title in course_info:
                           "finals", "assignments","quizzes", "assignments_count", "quizzes_count"]
     
     # Calculate assignment and quiz percentages
-    marking_categories[9] = random.randint(15, 20)
-    marking_categories[10] = random.randint(15, 20)
+    marking_categories[5]=marking_categories[6]=marking_categories[7]=random.randint(5, 10)
+    marking_categories[8] = random.randint(10,15)
+    marking_categories[9] = random.randint(10, 15)
+    marking_categories[10] = random.randint(10, 15)
     marking_categories[11]=random.randint(5,10)
     marking_categories[12]=random.randint(5,10)
-    remaining_percentage = 100 - (marking_categories[9] + marking_categories[10])
+    remaining_percentage = 100 - (sum(marking_categories[5:11]))
     
     # Update the marking categories with integer percentages
-    for i in range(8):       
-        marking_categories[i] = random.randint(0, (int)(remaining_percentage/5))
+    for i in range(4):       
+        marking_categories[i] = random.randint(0, (int)(remaining_percentage/4))
         remaining_percentage = remaining_percentage-marking_categories[i]
     
-    marking_categories[8] = remaining_percentage
+    marking_categories[4] = remaining_percentage
+    print(sum(marking_categories[0:11]))
 
     class_time = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None).strftime("%I:%M %p")
     class_days = fake.random_elements(elements=("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), length=3, unique=True)
