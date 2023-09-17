@@ -118,7 +118,7 @@ for course_code, course_title in course_info:
     existing_ta_ids.add(class_id)
 
 # Write data to the second CSV file
-with open("class_data.csv", "w", newline="") as csvfile:
+with open("..\\spreadsheet\\class_data.csv", "w", newline="") as csvfile:
     csv_writer = csv.writer(csvfile)
     csv_writer.writerow(["class_id", "class_name", "course_title", *marking_categories_names, "class_time", "class_days",
                          "lecturer_id", "lecturer_name", "lecturer_email", "lecturer_office_hours", "lecturer_office", "lecturer_phone",
@@ -126,3 +126,4 @@ with open("class_data.csv", "w", newline="") as csvfile:
     csv_writer.writerows(data2)
 
 print("CSV file 'class_data.csv' has been generated.")
+# Print out student names and their enrolled courses
